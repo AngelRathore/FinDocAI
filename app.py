@@ -15,6 +15,7 @@ from langchain_classic.chains import RetrievalQAWithSourcesChain
 
 from dotenv import load_dotenv
 load_dotenv()
+groq_api_key = os.getenv("GROQ_API_KEY")
 st.title("News Research Tool")
 st.sidebar.title("News Article URLS")
 
@@ -33,6 +34,7 @@ main_placeholder=st.empty()
 
 llm = ChatGroq(
     model_name="llama-3.1-8b-instant",
+    groq_api_key=groq_api_key,
     temperature=0.9,
     max_tokens=500
 )

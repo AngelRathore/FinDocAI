@@ -4,5 +4,5 @@ streamlit==1.32.2
 unstructured==0.12.5
 tiktoken==0.5.2
 faiss-cpu==1.7.4
-python-magic==0.4.27
+
 openai==0.28.1
