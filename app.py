@@ -3,7 +3,7 @@ import pickle
 import time
 import streamlit as st
 
-from langchain_community.document_loaders import UnstructuredURLLoader
+from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -40,9 +40,9 @@ llm = ChatGroq(
 )
 
 if process_url_clicked:
-    loader=UnstructuredURLLoader(urls=urls)
+    loader = WebBaseLoader(urls)
     main_placeholder.text("Data Loading Started...")
-    data=loader.load()
+    data = loader.load()
     text_splitter=RecursiveCharacterTextSplitter(
         separators=['\n\n','\n'],
         chunk_size=1000

@@ -1,8 +1,10 @@
-langchain==0.0.352
-python-dotenv==1.0.1
 streamlit==1.32.2
-unstructured==0.12.5
-tiktoken==0.5.2
+langchain==0.0.352
+langchain-community==0.0.20
 faiss-cpu==1.7.4
-
-openai==0.28.1
+tiktoken==0.5.2
+python-dotenv==1.0.1
+requests
+beautifulsoup4
+lxml
+sentence-transformers
