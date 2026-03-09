@@ -1,0 +1,7 @@
+venv/
+.env
+vector_index.pkl
+notebooks/vector_index.pkl
+__pycache__/
+.ipynb_checkpoints/
+.idea/
